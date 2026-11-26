@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6fb;
+    color: #263238;
+    padding: 20px;
+}
+
+header {
+    background: linear-gradient(135deg, #4338ca, #7c3aed);
+    color: white;
+    padding: 22px 30px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    font-size: 28px;
+}
+
+button {
+    background: #5b4bea;
+    color: white;
+    border: none;
+    padding: 11px 18px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #4338ca;
+}
+
+#resetBtn {
+    background: #ef4444;
+}
+
+#resetBtn:hover {
+    background: #dc2626;
+}
+
+main {
+    max-width: 1100px;
+    margin: auto;
+}
+
+section {
+    background: white;
+    padding: 22px;
+    margin-bottom: 22px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+}
+
+section h2 {
+    margin-bottom: 18px;
+    color: #3730a3;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+    border-left: 5px solid #6366f1;
+}
+
+.card h3 {
+    color: #64748b;
+    margin-bottom: 12px;
+}
+
+.card h2 {
+    color: #4338ca;
+    margin: 0;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+}
+
+input,
+select {
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    font-size: 14px;
+    outline: none;
+    flex: 1;
+    min-width: 150px;
+    background: white;
+}
+
+input:focus,
+select:focus {
+    border-color: #6366f1;
+}
+
+#expenseForm {
+    flex-direction: column;
+    align-items: stretch;
+}
+
+#expenseForm input,
+#expenseForm select {
+    width: 100%;
+}
+
+#expenseForm label {
+    font-weight: bold;
+}
+
+#expenseForm h3 {
+    margin-top: 8px;
+}
+
+#memberList,
+#expenseList,
+#balanceList,
+#settlementList {
+    margin-top: 15px;
+}
+
+#memberList>div,
+#expenseList>div,
+#balanceList>div,
+#settlementList>div {
+    background: #f8fafc;
+    padding: 14px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #e2e8f0;
+}
+
+#splitMembers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+#splitMembers label {
+    background: #eef2ff;
+    padding: 9px 12px;
+    border-radius: 7px;
+}
+
+#message {
+    margin: 15px 0;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    header {
+        padding: 18px;
+        gap: 12px;
+    }
+
+    header h1 {
+        font-size: 21px;
+    }
+
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 16px;
+    }
+
+    form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    input,
+    select,
+    form button {
+        width: 100%;
+    }
+}

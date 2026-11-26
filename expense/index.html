@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Splitter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Expense Splitter</h1>
+
+    <section>
+        <h2>Members (<span id="totalMembers">0</span>/10)</h2>
+
+        <form id="memberForm">
+            <input type="text" id="memberName" placeholder="Enter member name">
+            <input type="text" id="memberEmail" placeholder="Enter Gmail (e.g. name@gmail.com)">
+            <button type="submit">Add Member</button>
+        </form>
+
+        <div id="memberList"></div>
+    </section>
+
+    <section>
+        <h2>Add Expense</h2>
+
+        <form id="expenseForm">
+            <input type="text" id="expenseTitle" placeholder="Expense title">
+            <input type="text" id="expenseAmount" placeholder="Amount (₹)">
+
+            <label for="paidBy">Paid By:</label>
+            <select id="paidBy">
+                <option value="">Select member</option>
+            </select>
+
+            <label>Split Among:</label>
+            <div id="splitAmong"></div>
+
+            <button type="submit">Add Expense</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Expense History</h2>
+        <div id="expenseList"></div>
+    </section>
+
+    <section>
+        <h2>Balances</h2>
+        <div id="balanceList"></div>
+    </section>
+
+    <section>
+        <h2>Settle Up</h2>
+        <div id="settleList"></div>
+    </section>
+
+    <button type="button" id="resetBtn">Reset group</button>
+    <p id="message"></p>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
